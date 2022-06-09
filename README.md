@@ -14,4 +14,7 @@ docker-compose up -d
 
 При открытие localhost выдаёт json
 
-
+Исполняемый код
+```
+/app/Services/AccessLogServices.php
+```
