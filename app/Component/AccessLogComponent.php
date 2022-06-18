@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Services;
+namespace App\Component;
 
-use App\Component\FileComponent as File;
-use App\Component\StatusCodeComponent as StatusCode;
+use App\Services\FileServices as File;
+use App\Services\StatusCodeServices as StatusCode;
 
 /**
  * Сервисе класс для обработки http access_log файла
  */
-class AccessLogServices
+class AccessLogComponent
 {
     public const CRAWLERS_GOOGLE = 'Googlebot';
     public const CRAWLERS_BING = 'Bingbot';

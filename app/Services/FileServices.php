@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Component;
+namespace App\Services;
 
 /**
  * Класс компонент для работы с файлом
  */
-class FileComponent
+class FileServices
 {
     private const PATH_APP = "/var/www/html";
 

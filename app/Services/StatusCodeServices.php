@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Component;
+namespace App\Services;
 
 /**
  * Класс компонент для работы с статус кодом
  */
-class StatusCodeComponent
+class StatusCodeServices
 {
     /**
      * Указать все статус коды

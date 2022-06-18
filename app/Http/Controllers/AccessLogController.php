@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Component\FileComponent;
-use App\Services\AccessLogServices;
-use App\Component\StatusCodeComponent;
+use App\Component\AccessLogComponent;
+use App\Services\FileServices;
+use App\Services\StatusCodeServices;
 use Illuminate\Http\JsonResponse;
 
 class AccessLogController extends Controller
@@ -15,9 +15,9 @@ class AccessLogController extends Controller
      */
     public function getAccessLog(): JsonResponse
     {
-        $fileComponent = new FileComponent();
-        $statusCodeComponent = new StatusCodeComponent();
-        $accessLog = new AccessLogServices($fileComponent, $statusCodeComponent);
+        $fileComponent = new FileServices();
+        $statusCodeComponent = new StatusCodeServices();
+        $accessLog = new AccessLogComponent($fileComponent, $statusCodeComponent);
         $data = $accessLog->handle();
 
         return response()->json($data);
